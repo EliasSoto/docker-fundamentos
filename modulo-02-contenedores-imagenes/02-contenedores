@@ -1,0 +1,44 @@
+# 🐳 2.2 — Administración de contenedores
+
+## 🎯 Objetivo
+
+Aprender a crear, iniciar, detener, reiniciar y eliminar contenedores Docker.
+
+## 📋 Comandos principales
+
+| Comando | Función |
+|---|---|
+| `docker create` | Crea un contenedor sin iniciarlo. |
+| `docker run` | Crea e inicia un contenedor. |
+| `docker start` | Inicia un contenedor existente. |
+| `docker stop` | Detiene un contenedor. |
+| `docker restart` | Reinicia un contenedor. |
+| `docker rm` | Elimina un contenedor detenido. |
+| `docker rm -f` | Fuerza la eliminación de un contenedor. |
+
+## 🔄 Ciclo de vida
+
+```text
+Imagen
+  |
+  v
+Created
+  |
+  v
+Running <---- restart
+  |
+  v
+Exited
+  |
+  v
+Eliminado
+```
+
+## 💡 Conceptos clave
+
+- `create` crea, pero no ejecuta.
+- `run` crea e inicia.
+- `start` recupera un contenedor existente.
+- `stop` detiene sin eliminar.
+- `rm` elimina el contenedor, pero conserva la imagen.
+
