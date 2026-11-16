@@ -1,0 +1,9 @@
+name: contenedor
+services:
+  api:
+    image: python:3.12
+    command: ["python", "-c", "import time; time.sleep(3600)"]
+    environment:
+      DEBUG: ${DEBUG}
+    ports:
+      - "${PORT}:8000"
