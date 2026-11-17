@@ -1,47 +1,63 @@
 services:
 
-  # Servicio Frontend: interfaz de usuario.
+  #* Servicio Frontend: interfaz de usuario.
   frontend:
-    # Construye la imagen utilizando el Dockerfile del directorio actual.
+    #* Construye la imagen utilizando el Dockerfile del directorio actual.
     build: .
-    # Conecta el contenedor a la red red_elias.
+
+    #* Expone el puerto 3000 para la comunicación interna entre contenedores.
+    expose:
+      - "3000"
+
+    #* Conecta el contenedor a la red red_elias.
     networks:
       - red_elias
 
-  # Servicio API: procesa las solicitudes del Frontend.
+
+  #* Servicio API: procesa las solicitudes del Frontend.
   api:
-    # Construye la imagen utilizando el mismo Dockerfile.
+    #* Construye la imagen utilizando el mismo Dockerfile.
     build: .
-    # Conecta el contenedor a la red red_elias.
+
+    #* Expone el puerto 8000 para la comunicación interna entre contenedores.
+    expose:
+      - "8000"
+
+    #* Conecta el contenedor a la red red_elias.
     networks:
       - red_elias
 
-  # Servicio PostgreSQL: almacena y gestiona los datos.
+
+  #* Servicio PostgreSQL: almacena y gestiona los datos.
   postgres:
-    # Utiliza la imagen oficial de PostgreSQL versión 17.
+    #* Utiliza la imagen oficial de PostgreSQL versión 17.
     image: postgres:17
 
-    # Configura la contraseña del usuario postgres.
+    #* Configura la contraseña del usuario postgres.
     environment:
       POSTGRES_PASSWORD: ejemplo
 
-    # Monta un volumen para conservar los datos de la base de datos.
+    #* Expone el puerto 5432 para la comunicación interna con la base de datos.
+    expose:
+      - "5432"
+
+    #* Monta un volumen para conservar los datos de la base de datos.
     volumes:
       - datos_postgres:/var/lib/postgresql/data
 
-    # Conecta PostgreSQL a la red red_elias.
+    #* Conecta PostgreSQL a la red red_elias.
     networks:
       - red_elias
 
 
-# Define la red virtual que permite la comunicación entre los servicios.
+#* Define la red virtual que permite la comunicación entre los servicios.
 networks:
   red_elias:
-    # Establece el nombre exacto de la red en Docker.
+    #* Establece el nombre exacto de la red en Docker.
     name: red_elias
 
 
-# Define los volúmenes persistentes administrados por Docker.
+#* Define los volúmenes persistentes administrados por Docker.
 volumes:
-  # Conserva los datos de PostgreSQL aunque se elimine su contenedor.
+  #* Conserva los datos de PostgreSQL aunque se elimine su contenedor.
   datos_postgres:
