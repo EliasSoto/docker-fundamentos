@@ -1,4 +1,4 @@
-# 🐳 2.5 Administración de imágenes Docker
+# 🐳 Administración de imágenes Docker
 
 Las imágenes son plantillas utilizadas para crear contenedores. Docker permite descargarlas, listarlas, etiquetarlas y eliminarlas.
 

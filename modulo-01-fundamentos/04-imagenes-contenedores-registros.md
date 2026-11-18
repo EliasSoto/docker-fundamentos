@@ -1,4 +1,4 @@
-# 🐳 1.4 — Imágenes, contenedores y registros
+# 🐳 Imágenes, contenedores y registros
 
 ## 📦 1. Imágenes Docker
 

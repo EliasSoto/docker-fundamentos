@@ -1,4 +1,4 @@
-# 1.3 Arquitectura de Docker
+# Arquitectura de Docker
 
 ## ⚙️ ¿Cómo funciona Docker?
 

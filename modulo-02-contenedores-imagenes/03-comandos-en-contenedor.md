@@ -1,4 +1,4 @@
-# 🐳 2.4 Ejecutar comandos dentro de un contenedor
+# 🐳 Ejecutar comandos dentro de un contenedor
 
 Docker permite ejecutar comandos dentro de un contenedor en funcionamiento mediante `docker exec`.
 

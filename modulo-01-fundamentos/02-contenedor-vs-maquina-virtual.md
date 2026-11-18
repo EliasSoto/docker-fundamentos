@@ -1,4 +1,4 @@
-# 1.2 Contenedores vs. Máquinas Virtuales
+# Contenedores vs. Máquinas Virtuales
 
 ## 🐳 ¿Qué es un contenedor?
 

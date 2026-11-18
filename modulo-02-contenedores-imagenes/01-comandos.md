@@ -1,4 +1,4 @@
-# 🐳 2.1 — Docker CLI y comandos esenciales
+# 🐳 Docker CLI y comandos esenciales
 
 ## 🎯 Objetivo
 

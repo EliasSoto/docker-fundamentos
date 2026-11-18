@@ -1,4 +1,4 @@
-# 🐳 1. ¿Qué es Docker?
+# 🐳 ¿Qué es Docker?
 
 ## 📌 Definición
 

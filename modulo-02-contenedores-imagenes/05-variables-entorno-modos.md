@@ -1,4 +1,4 @@
-# 🐳 2.6 Variables de entorno y modos de ejecución
+# 🐳 Variables de entorno y modos de ejecución
 
 ## 📌 Variables de entorno (`-e`)
 

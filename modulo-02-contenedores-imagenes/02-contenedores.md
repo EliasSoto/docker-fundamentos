@@ -1,4 +1,4 @@
-# 🐳 2.2 — Administración de contenedores
+# 🐳 Administración de contenedores
 
 ## 🎯 Objetivo
 
